@@ -11,7 +11,8 @@ class Diamond(object):
             arr_first_half.append(char_pointer)
             char_pointer = chr(ord(char_pointer)+1)
 
-        return arr_first_half + [self._topChar] + list(reversed(arr_first_half))
+        return arr_first_half + [self._topChar] + \
+            list(reversed(arr_first_half))
 
     def middle_index(self, arr_elaborate):
         # print(arr_elaborate)
@@ -31,4 +32,6 @@ class Diamond(object):
                     w_space = idx-m
 
                 m_space = max_length - (2 + (2*w_space))
-                print("{}{}{}{}{}{}{}".format('|', '.'*w_space, alphabet, '.'*m_space, alphabet, '.' * w_space, '|'))
+                print("{}{}{}{}{}{}{}".format(
+                        '|', '.'*w_space, alphabet, '.'*m_space, alphabet,
+                        '.' * w_space, '|'))
