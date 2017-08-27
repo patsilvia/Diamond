@@ -6,7 +6,7 @@ class Diamond(object):
     def elaborate(self):
         char_pointer = 'A'
         arr_first_half = []
-        print("{} {}".format("Expect upto ", self._topChar))
+        # print("{} {}".format("Expect upto ", self._topChar))
         while (ord(char_pointer) < ord(self._topChar)):
             arr_first_half.append(char_pointer)
             char_pointer = chr(ord(char_pointer)+1)
@@ -14,7 +14,7 @@ class Diamond(object):
         return arr_first_half + [self._topChar] + list(reversed(arr_first_half))
 
     def middle_index(self, arr_elaborate):
-        print(arr_elaborate)
+        # print(arr_elaborate)
         return int(round(len(arr_elaborate)/2, 0))
 
     def run_topdown(self, arr_elaborate):
